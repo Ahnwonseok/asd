@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="badb63c4-822e-4234-bac2-738c4bd318ce" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/../../frontend/.idea/frontend.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/Demo.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bucket2/.idea/bucket.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bucket3/.idea/bucket.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../homework/.idea/homework.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mars/.idea/mars.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../movie/.idea/movie.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../startbootstrap2/.idea/startbootstrap-sb-admin-2-gh-pages.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pythonprac/.idea/pythonprac.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../startbootstrap-sb-admin-2-gh-pages/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../startbootstrap/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../startbootstrap/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../startbootstrap/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/../startbootstrap/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../startbootstrap/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../startbootstrap/templates/index.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2ITsaEwMGRGNoGO3DKPqOINJXX6" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/dkswn/Desktop/sparta/projects/Demo&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  }
+}</component>
+  <component name="RunManager" selected="Python.app">
+    <configuration name="Demo" type="PythonConfigurationType" factoryName="Python">
+      <module name="Demo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="bucket" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\dkswn\Desktop\sparta\Face\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="bucket" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.Demo" />
+      <item itemvalue="Python.app" />
+      <item itemvalue="Python.test" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.app" />
+        <item itemvalue="Python.test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="디폴트 작업">
+      <changelist id="badb63c4-822e-4234-bac2-738c4bd318ce" name="변경" comment="" />
+      <created>1670216968362</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1670216968362</updated>
+      <workItem from="1670216982146" duration="3297000" />
+      <workItem from="1670225658284" duration="3310000" />
+      <workItem from="1670229224052" duration="7055000" />
+      <workItem from="1670273560159" duration="16000" />
+      <workItem from="1670273609933" duration="634000" />
+      <workItem from="1670284720031" duration="1341000" />
+      <workItem from="1670286847697" duration="14000" />
+      <workItem from="1670403470792" duration="3281000" />
+      <workItem from="1670421837569" duration="1029000" />
+      <workItem from="1670458875930" duration="34000" />
+      <workItem from="1670459316048" duration="705000" />
+      <workItem from="1670460350437" duration="2797000" />
+      <workItem from="1670468367095" duration="1027000" />
+      <workItem from="1670469484849" duration="373000" />
+      <workItem from="1670479977221" duration="74000" />
+      <workItem from="1670480163988" duration="20000" />
+      <workItem from="1670482375970" duration="52000" />
+      <workItem from="1670551339992" duration="3539000" />
+      <workItem from="1670554912415" duration="19264000" />
+      <workItem from="1670579995490" duration="2237000" />
+      <workItem from="1670586390428" duration="108000" />
+      <workItem from="1670586629991" duration="208000" />
+      <workItem from="1670593956264" duration="77000" />
+      <workItem from="1670597019265" duration="23000" />
+      <workItem from="1670597385136" duration="630000" />
+      <workItem from="1670622821815" duration="69000" />
+      <workItem from="1670637803794" duration="32000" />
+      <workItem from="1670639384898" duration="64000" />
+      <workItem from="1670639450800" duration="11000" />
+      <workItem from="1670639476398" duration="298000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Demo$app.coverage" NAME="app 커버리지 결과" MODIFIED="1670586789380" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/bucket$app.coverage" NAME="app 커버리지 결과" MODIFIED="1670580324739" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/bucket$test.coverage" NAME="test 커버리지 결과" MODIFIED="1670573377080" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>

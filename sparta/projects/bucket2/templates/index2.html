@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>Blog Template · Bootstrap v5.1</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/blog/">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/css2/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .col-md-7{
+      text-align: center; /* 문자들의 가운데 정렬을 해제 */
+      width: 400px;
+      margin-left: 70px;
+      }
+
+      .blog-post-title{
+      margin-left: 150px;
+      }
+
+      .col-md-8{
+        width: 500px;
+        height: 1000px;
+        font-size: 1.5em;
+        padding-top: 50px;
+        margin-right: 75px;
+      }
+      .col-md-9{
+        width: 700px;
+        height: 1500px;
+        font-size: 1.5em;
+        padding-top: 50px;
+        margin-left: 20px;
+      }
+      .blog-post-title2{
+        text-align: center;
+        padding-left: 50px;
+        padding-bottom: 20px;
+      }
+      .blog-footer{
+        margin-top: 100px;
+      }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="/static/css2/blog.css" rel="stylesheet">
+  </head>
+  <head>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css" />
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" />
+  </head>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="/ path /plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="/ Path /plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+
+<body>
+
+<div class="container">
+  <header class="blog-header py-3">
+    <div class="row flex-nowrap justify-content-between align-items-center">
+      <div class="col-4 pt-1">
+        <!-- <a class="link-secondary" href="#">Subscribe</a> -->
+      </div>
+      <div class="col-4 text-center">
+        <a class="blog-header-logo text-dark" href="#">Team2</a>
+      </div>
+      <div class="col-4 d-flex justify-content-end align-items-center">
+
+      </div>
+    </div>
+  </header>
+
+</div>
+
+<main class="container">
+  <div class="aa">
+    <div class="  ">
+      <!-- <h1 class="display-4 fst-italic">과연 이 영화가 흥행할까 궁금하시죠?</h1><br> -->
+      <!-- <h5 class="font-weight-bolder">새로운 재테크의 시작</h5> -->
+
+      <!-- <p class="card-text mb-auto">이 사이트에서 최근까지 국내에 개봉한 모든 영화에 대한 정보를 알려줍니다.</p> -->
+
+      <p class="lead mb-0"><a href="#" class="text-black">새로운 재테크의 시작</a></p><br>
+      <h3><p>새로운 가능성에 투자하세요<br>가장 높은 확률로 수익을<br>돌려드립니다</p><pre></pre><pre></pre><pre></pre><button input type="submit" class="btn-secondary" style="float: right;"><p class="lead mb-0"><a href="https://www.google.com/search?q=%EB%A6%AC%EC%85%80+%ED%94%8C%EB%9E%AB%ED%8F%BC&oq=%EB%A6%AC%EC%85%80+%ED%94%8C%EB%9E%AB%ED%8F%BC&aqs=chrome..69i57j69i59j0i512j0i5i30l2j69i61j69i60j69i61.3702j0j4&sourceid=chrome&ie=UTF-8" class="text-white">>>기사 더보기</a></p></button></h3>
+    </div>
+  </div>
+
+    <div class="row mb-2">
+    <div class="col-md-6">
+
+    </div>
+    <div class="col-md-6">
+
+    </div>
+  </div>
+
+
+  <div style="width:60%;">
+    <canvas id="canvas2"></canvas>
+  </div>
+<script>
+  new Chart(document.getElementById("canvas2"), {
+    type: 'bar',
+    data: {
+        labels: ['East', 'West', 'South', 'Central', 'North', 'etc'],
+        datasets: [{
+            label: '지역별 판매량',
+            data: [100,100,90,100,100,100],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+      tooltips: {
+    yAlign: 'bottom',
+            xAlign: 'right',
+    xPadding: 25,
+            yPadding: 15,
+      xPadding: 45},
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>
+
+  <div style="width:60%;">
+    <canvas id="canvas"></canvas>
+  </div>
+
+  <script>
+  new Chart(document.getElementById("canvas"), {
+      type: 'line',
+      data: {
+          labels: ['2017-09-01',
+                  '2017-09-26',
+                  '2017-10-21',
+                  '2017-11-15',
+                  '2017-12-10',
+                  '2018-01-04',
+                  '2018-01-29',
+                  '2018-02-23',
+                  '2018-03-20',
+                  '2018-04-14',
+                  '2018-05-09',
+                  '2018-06-03',
+                  '2018-06-28',
+                  '2018-07-23',
+                  '2018-08-17',
+                  '2018-09-11',
+                  '2018-10-06',
+                  '2018-10-31',
+                  '2018-11-25',
+                  '2018-12-20',
+                  '2019-01-14',
+                  '2019-02-08'],
+          datasets: [{
+              label: '날짜별 평균상품가격',
+              data: [
+              611.76190476, 689.77272727, 641.76923077, 627.03703704,
+                    431.43103448, 419.54362416, 450.04      , 461.51685393,
+                    480.61842105, 556.0070922 , 532.37735849, 470.05555556,
+                    540.07526882, 389.50326797, 343.93390805, 460.29347826,
+                    427.83333333, 462.42756184, 319.54444444, 346.70299145,
+                    361.29337539, 434.47146402
+              ],
+              borderColor: "rgba(255, 201, 14, 1)",
+              backgroundColor: "rgba(255, 201, 14, 0.1)",
+              fill: true,
+              lineTension: 0
+          }]
+      },
+      options: {
+          responsive: true,
+          title: {
+              display: true,
+              // text: '테스트 데이터셋'
+          },
+          tooltips: {
+              mode: 'index',
+              intersect: false,
+          },
+          hover: {
+              mode: 'nearest',
+              intersect: true
+          },
+
+          scales: {
+              xAxes: [{
+                  position: "right",
+                  display: true,
+                  scaleLabel: {
+                      display: true,
+                      labelString: '날짜'
+                  }
+              }],
+              yAxes: [{
+                  display: true,
+                  ticks: {
+                      suggestedMin: 0,
+                  },
+                  scaleLabel: {
+                      display: true,
+                      // labelString: 'y축'
+                  }
+              }]
+          }
+      }
+  });
+  </script>
+
+  <div class="row g-5">
+    <div class="col-md-8">
+      <article class="blog-post">
+        <h3 class="blog-post-title">수익률 예측하기</h3>
+        <br>
+        <div class="col-md-7 col-lg-8">
+
+      <form action = "/result" method = "POST">
+        <!-- <h6>수익률 예측해보기</h6> -->
+        <h5><input type ="text" class="form-control" placeholder="소매가를 입력하세요" name = "소매가" /></p></h5>
+        <!-- <h5><input type ="text" class="form-control" placeholder="신발 사이즈를 입력하세요" name = "사이즈"/></p></h5> -->
+        <select class="form-select form-select-lg mb-3" name = "브랜드" >
+          <option selected>브랜드를 선택하세요</option>
+          <option value="Brand_Adidas">Adidas</option>
+          <option value="Brand_Jordan">Jordan</option>
+          <option value="Brand_Nike">Nike</option>
+        </select>
+        <select class="form-select form-select-lg mb-3" name = "상품명" >
+          <option selected>상품을 선택하세요</option>
+          <option value="Sneaker_Name_Adidias Yeezy Boost">Sneaker_Name_Adidias Yeezy Boost</option>
+          <option value="Sneaker_Name_Air Jordan 1">Sneaker_Name_Air Jordan 1</option>
+          <option value="Sneaker_Name_Nike Air Force">Sneaker_Name_Nike Air Force</option>
+          <option value="Sneaker_Name_Nike Air Max">Sneaker_Name_Nike Air Max</option>
+          <option value="Sneaker_Name_Nike Air Presto">Sneaker_Name_Nike Air Presto</option>
+          <option value="Sneaker_Name_Nike Air VaporMax">Sneaker_Name_Nike Air VaporMax</option>
+          <option value="Sneaker_Name_Nike Blazer Mid">Sneaker_Name_Nike Blazer Mid</option>
+          <option value="Sneaker_Name_Nike React Hyperdunk">Sneaker_Name_Nike React Hyperdunk</option>
+          <option value="Sneaker_Name_Nike Zoom Fly">Sneaker_Name_Nike Zoom Fly</option>
+        </select>
+
+
+              <script>
+                $(document).ready(function(){
+                    $("#date").datepicker({});
+                });
+              </script>
+
+              <div class="container">
+                  <input type="text" class="form-control" id="date" name = "주문일" placeholder="상품의 주문일을 선택해주세요."/>
+              </div>
+              <script>
+                $(document).ready(function(){
+                    $("#date2").datepicker({});
+                });
+              </script>
+              <div class="container">
+                  <input type="text" class="form-control" id="date2" name = "발매일" placeholder="상품의 발매일을 선택해주세요."/>
+              </div>
+
+              <button input type="submit" class="btn btn-secondary">확인하기</button>
+            </form>
+        </div>
+      </article>
+    </div>
+
+    <div class="col-md-9">
+      <h1 class="blog-post-title">현재 리셀 상품 순위(kream)</h1>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>브랜드</th>
+              <th>상품명</th>
+              <th>즉시거래가</th>
+              <th>거래수</th>
+              <th>저장수</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{name1}}</td>
+              <td>{{name2}}</td>
+              <td>{{name3}}</td>
+              <td>{{name4}}</td>
+              <td>{{name5}}</td>
+            </tr>
+            <tr>
+              <td>{{name6}}</td>
+              <td>{{name7}}</td>
+              <td>{{name8}}</td>
+              <td>{{name9}}</td>
+              <td>{{name10}}</td>
+            </tr>
+            <tr>
+              <td>{{name11}}</td>
+              <td>{{name12}}</td>
+              <td>{{name13}}</td>
+              <td>{{name14}}</td>
+              <td>{{name15}}</td>
+            </tr>
+            <tr>
+              <td>{{name16}}</td>
+              <td>{{name17}}</td>
+              <td>{{name18}}</td>
+              <td>{{name19}}</td>
+              <td>{{name20}}</td>
+            </tr>
+            <tr>
+              <td>{{name21}}</td>
+              <td>{{name22}}</td>
+              <td>{{name23}}</td>
+              <td>{{name24}}</td>
+              <td>{{name25}}</td>
+            </tr>
+            <tr>
+              <td>{{name26}}</td>
+              <td>{{name27}}</td>
+              <td>{{name28}}</td>
+              <td>{{name29}}</td>
+              <td>{{name30}}</td>
+            </tr>
+            <tr>
+              <td>{{name31}}</td>
+              <td>{{name32}}</td>
+              <td>{{name33}}</td>
+              <td>{{name34}}</td>
+              <td>{{name35}}</td>
+            </tr>
+            <tr>
+              <td>{{name36}}</td>
+              <td>{{name37}}</td>
+              <td>{{name38}}</td>
+              <td>{{name39}}</td>
+              <td>{{name40}}</td>
+            </tr>
+            <tr>
+              <td>{{name41}}</td>
+              <td>{{name42}}</td>
+              <td>{{name43}}</td>
+              <td>{{name44}}</td>
+              <td>{{name45}}</td>
+            </tr>
+            <tr>
+              <td>{{name46}}</td>
+              <td>{{name47}}</td>
+              <td>{{name48}}</td>
+              <td>{{name49}}</td>
+              <td>{{name50}}</td>
+            </tr>
+          </tbody>
+          <form action = "/" method = "POST"><button input type="submit" class="btn btn-secondary">실시간 순위 확인하기</button></form>
+        </table>
+    </div>
+  </div>
+
+<!--
+  <div class="col-lg-4 col-md-6">
+    <div class="card h-100">
+      <div class="card-header pb-0">
+
+      <form action = "/result" method = "POST">
+        <h6>수익률 예측해보기</h6>
+        <h5><input type ="text" class="form-control" placeholder="소매가를 입력하세요" name = "소매가" /></p></h5>
+        <h5><input type ="text" class="form-control" placeholder="신발 사이즈를 입력하세요" name = "사이즈"/></p></h5>
+            <select class="form-select form-select-lg mb-3" name = "브랜드" >
+              <option selected>브랜드를 선택하세요</option>
+              <option value="Brand_Adidas">adidas</option>
+              <option value="Brand_Jordan">350</option>
+              <option value="Brand_Nike">yeezy</option>
+            </select>
+            <select class="form-select form-select-lg mb-3" name = "상품명" >
+              <option selected>상품을 선택하세요</option>
+              <option value="Sneaker_Name_Adidias Yeezy Boost">adidas</option>
+              <option value="Sneaker_Name_Air Jordan 1">350</option>
+              <option value="Sneaker_Name_Nike Air Force">yeezy</option>
+              <option value="Sneaker_Name_Nike_Air Max">v2</option>
+              <option value="Sneaker_Name_Nike Air Presto">white</option>
+              <option value="Sneaker_Name_Nike Air VaporMax">off</option>
+              <option value="Sneaker_Name_Nike Blazer Mid">nike</option>
+              <option value="Sneaker_Name_Nike React Hyperdunk">air</option>
+              <option value="Sneaker_Name_Nike Zoom Fly">blue</option>
+            </select>
+
+              <script>
+                $(document).ready(function(){
+                    $("#date").datepicker({});
+                });
+              </script>
+
+
+              <div class="container">
+                  <input type="text" class="form-control" id="date" name = "발매일" placeholder="상품의 발매일을 선택해주세요."/>
+              </div>
+
+              <button input type="submit" class="btn btn-secondary">확인하기</button>
+            </form>
+          </div>
+      </div>
+    </div>
+  </div> -->
+
+
+
+</main>
+
+<footer class="blog-footer">
+  <p>produces by team2</p>
+</footer>
+  </body>
+</html>

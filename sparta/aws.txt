@@ -1,0 +1,20 @@
+# python3 -> python (python3 말고 python으로 치고 명령내릴게)
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 10
+
+# pip3 -> pip
+sudo apt-get update
+sudo apt-get install -y python3-pip
+sudo update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 1
+
+# port forwarding(80으로 들어온 포트를 5000으로 넘겨줌)
+sudo iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 5000 
+
+#강제 종료하기
+ps -ef | grep 'python app.py' | awk '{print $2}' | xargs kill
+
+#nohup
+nohup python app.py &
+
+0.0.0.0/0 , 휘수 대표기도, 깃, 로그인, 자바,엔터검색, ubuntu dlib 설치, ubuntu가상환경
+
+ip주소 : 54.180.32.221

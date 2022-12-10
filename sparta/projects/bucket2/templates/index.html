@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+
+    <title>인생 버킷리스트</title>
+
+    <style>
+        * {
+            font-family: 'Gowun Dodum', sans-serif;
+        }
+
+        .mypic {
+            width: 100%;
+            height: 200px;
+
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1601024445121-e5b82f020549?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1189&q=80');
+            background-position: center;
+            background-size: cover;
+
+            color: white;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mypic > h1 {
+            font-size: 30px;
+        }
+
+        .mybox {
+            width: 95%;
+            max-width: 700px;
+            padding: 20px;
+            box-shadow: 0px 0px 10px 0px lightblue;
+            margin: 20px auto;
+        }
+
+        .mybucket {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .mybucket > input {
+            width: 70%;
+        }
+
+        .mybox > li {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+            margin-bottom: 10px;
+            min-height: 48px;
+        }
+
+        .mybox > li > h2 {
+            max-width: 75%;
+            font-size: 20px;
+            font-weight: 500;
+            margin-right: auto;
+            margin-bottom: 0px;
+        }
+
+        .mybox > li > h2.done {
+            text-decoration: line-through
+        }
+
+        #angel {
+            margin-left: 5px;
+        }
+
+        #Day {
+            width: 70%;
+            height: 50px;
+        }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="/static/css2/blog.css" rel="stylesheet">
+</head>
+<script>
+    $(document).ready(function () {
+        show_bucket();
+        show_graph();
+    });
+
+    function show_bucket() {
+        $.ajax({
+            type: "GET",
+            url: "/bucket",
+            data: {},
+            success: function (response) {
+                let rows = response['buckets']
+
+                for (let i = 0; i < rows.length; i++) {
+                    let bucket = rows[i]['bucket']
+                    let num = rows[i]['num']
+                    let done = rows[i]['done']
+                    let del = rows[i]['del']
+                    let can = rows[i]['can']
+
+                    if (del == 1) {
+                        continue
+                    }
+                    if (done == 0) {
+                        temp_html = `<li>
+                                            <h2>✅ ${bucket}</h2>
+                                            <button onclick="done_bucket(${num})" type="button" class="btn btn-outline-primary">완료!</button>
+                                            <button onclick="del_bucket(${num})" type="button" class="btn btn-outline-primary" id="angel">삭제!</button>
+                                          </li>`
+                        $('#bucket-list').append(temp_html)
+                    } else if (done == 1 && can == 1) {
+                        temp_html = `<li>
+                                            <h2 class="done">✅ ${bucket}</h2>
+                                            <button onclick="can_bucket(${num})" type="button" class="btn btn-outline-primary" id="angel">취소</button>
+                                        </li>`
+                        $('#bucket-list').append(temp_html)
+                    } else {
+                        temp_html = `<li>
+                                            <h2 class="done">✅ ${bucket}</h2>
+                                            <button onclick="can_bucket(${num})" type="button" class="btn btn-outline-primary" id="angel">취소</button>
+                                            <button onclick="del_bucket(${num})" type="button" class="btn btn-outline-primary" id="angel">삭제</button>
+                                        </li>`
+                        $('#bucket-list').append(temp_html)
+                    }
+                }
+            }
+        });
+    }
+
+    function save_bucket() {
+        let menu = $('#menu').val()
+        let day = $('#Day').val()
+
+        $.ajax({
+            type: "POST",
+            url: "/bucket",
+            data: {menu_give: menu, day_give: day},
+            success: function (response) {
+                alert(response["msg"])
+                window.location.reload()
+            }
+        });
+    }
+
+    function done_bucket(num) {
+        $.ajax({
+            type: "POST",
+            url: "/bucket/done",
+            data: {num_give: num},
+            success: function (response) {
+                alert(response["msg"])
+                window.location.reload()
+            }
+        });
+    }
+
+    function can_bucket(num) {
+        $.ajax({
+            type: "POST",
+            url: "/bucket/can",
+            data: {num_give: num},
+            success: function (response) {
+                alert(response["msg"])
+                window.location.reload()
+            }
+        });
+    }
+
+    function del_bucket(num) {
+        $.ajax({
+            type: "POST",
+            url: "/bucket/del",
+            data: {num_give: num},
+            success: function (response) {
+                alert(response["msg"])
+                window.location.reload()
+            }
+        });
+    }
+</script>
+
+</head>
+<body>
+<div class="mypic">
+    <h1>식당 관리 프로그램</h1>
+</div>
+<div class="mybox">
+    <div class="mybucket">
+        <input id="menu" class="form-control" type="text" placeholder="판매된 메뉴를 입력하세요">
+        <select class="form-select form-select-lg mb-3" id="Day">
+            <option selected>요일을 선택하세요</option>
+            <option value="월">월</option>
+            <option value="화">화</option>
+            <option value="수">수</option>
+            <option value="목">목</option>
+            <option value="금">금</option>
+            <option value="토">토</option>
+            <option value="일">일</option>
+        </select>
+        <button onclick="save_bucket()" type="button" class="btn btn-outline-primary">입력</button>
+    </div>
+</div>
+
+<div style="width:50%;margin:auto">
+    <canvas id="line-chart"></canvas>
+</div>
+<script>
+
+
+    $.ajax({
+        type: "GET",
+        url: "/bucket",
+        data: {},
+
+        success: function (response) {
+            let menu = response['menu']
+            console.log(response)
+
+            new Chart(document.getElementById("line-chart"), {
+                type: 'line',
+                data: {
+                    labels: ['월', '화', '수', '목', '금', '토', '일'],
+                    datasets: [{
+                        data: [menu[0]['Day']['월'], menu[0]['Day']['화'], menu[0]['Day']['수'], menu[0]['Day']['목'], menu[0]['Day']['금'], menu[0]['Day']['토'], menu[0]['Day']['일']],
+                        label: "김치찌개",
+                        borderColor: "#3e95cd",
+                        fill: false
+                    }, {
+                        data: [menu[1]['Day']['월'], menu[1]['Day']['화'], menu[1]['Day']['수'], menu[1]['Day']['목'], menu[1]['Day']['금'], menu[1]['Day']['토'], menu[1]['Day']['일']],
+                        label: "동태찌개",
+                        borderColor: "#8e5ea2",
+                        fill: false
+                    }, {
+                        data: [menu[2]['Day']['월'], menu[2]['Day']['화'], menu[2]['Day']['수'], menu[2]['Day']['목'], menu[2]['Day']['금'], menu[2]['Day']['토'], menu[2]['Day']['일']],
+                        label: "부대찌개",
+                        borderColor: "#e8c3b9",
+                        fill: false
+                    }, {
+                        data: [menu[3]['Day']['월'], menu[3]['Day']['화'], menu[3]['Day']['수'], menu[3]['Day']['목'], menu[3]['Day']['금'], menu[3]['Day']['토'], menu[3]['Day']['일']],
+                        label: "청국장",
+                        borderColor: "#c45850",
+                        fill: false
+                    }
+                    ]
+                },
+                options: {
+                    title: {
+                        display: true,
+                        text: '요일별 메뉴 판매량'
+                    }
+                }
+            });
+        }
+    });
+
+</script>
+<div style="width:50%;margin:auto">
+    <canvas id="myChart"></canvas>
+</div>
+
+<script>
+
+    $.ajax({
+        type: "GET",
+        url: "/bucket",
+        data: {},
+        success: function (response) {
+            let ingredient = response['ingredient']
+
+            const ctx = document.getElementById('myChart').getContext('2d');
+            const myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['마늘', '양파', '대파', '소금', '설탕'],
+                    datasets: [{
+                        label: '재료량',
+                        data: [ingredient[0]['num'], ingredient[1]['num'], ingredient[2]['num'], ingredient[3]['num'], ingredient[4]['num']],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true,
+                            }
+                        }]
+                    }
+                }
+            });
+        }
+    });
+</script>
+</body>
+</html>

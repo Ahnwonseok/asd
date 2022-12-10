@@ -2,6 +2,11 @@ from flask import Flask, render_template, request, jsonify
 
 app = Flask(__name__)
 
+from pymongo import MongoClient
+
+client = MongoClient('mongodb+srv://test:sparta@cluster0.ozvefus.mongodb.net/Clurster0?retryWrites=true&w=majority')
+db = client.dbsparta
+
 @app.route('/')
 def home():
     return render_template('index.html')
@@ -9,6 +14,15 @@ def home():
 @app.route('/index.html')
 def dashboard():
     return render_template('index.html')
+
+@app.route("/index/net", methods=["GET"])
+def bucket_get():
+    #음식의 모든 정보를 html로 넘겨준다
+    food_list = list(db.menu.find({}, {'_id': False}))
+    #재료의 모든 정보를 html로 넘겨준다
+    ingredient_list = list(db.ingredient.find({}, {'_id': False}))
+
+    return jsonify({'menu': food_list, 'ingredient': ingredient_list})
 
 @app.route('/login.html')
 def login():
